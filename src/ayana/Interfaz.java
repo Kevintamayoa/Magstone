@@ -4150,7 +4150,8 @@ JOptionPane.YES_NO_OPTION);
                stock = producto.PuntoVentaStock;
            } else {
                stock = producto.CabinaStock;
-           }
+           } 
+           
       
            if ((stock+qty-cantidad)<0 &&moveslist.get(tableMovProducto.getSelectedRows()[0]).In_Id != 0) {
                 JOptionPane.showMessageDialog(this,"No hay suficientes productos para realizar esta acción.","Error de eliminación",JOptionPane.ERROR_MESSAGE);
