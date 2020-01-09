@@ -14,7 +14,7 @@ import java.util.Date;
 public class Income {
     public int Id;
     public Date Date;
-    public int Client_Id;
+    public int Sale_Id;
     public int Type_Id;
     public String Concept;
     public int Account_Id;
@@ -26,7 +26,7 @@ public class Income {
     public Income(int Id, Date Date, int Client_Id, int Type_Id, String Concept, int Account_Id, int Bills, String BillsNumber, double Amount, int User_Id) {
         this.Id = Id;
         this.Date = Date;
-        this.Client_Id = Client_Id;
+        this.Sale_Id = Client_Id;
         this.Type_Id = Type_Id;
         this.Concept = Concept;
         this.Account_Id = Account_Id;
@@ -39,7 +39,7 @@ public class Income {
     public Income( Date Date,int client_id,int Type_Id, String Concept, int Account_Id, int Bills, String BillsNumber, double Amount) {
         this.Date = Date;
         this.Type_Id = Type_Id;
-        this.Client_Id=client_id;
+        this.Sale_Id=client_id;
         this.Concept = Concept;
         this.Account_Id = Account_Id;
         this.Bills = Bills;
@@ -50,7 +50,8 @@ public class Income {
     public String Expense_Type;
     public String Account;
     public String User;
-     public String Client;
+    public String Client;
+    public String Sale;
     public Boolean Bill(){
         if(Bills==0){
             return false;
@@ -72,10 +73,11 @@ public class Income {
             return Amount -Amount/1.16;
         }
     }
-    public Income(int Id, Date Date,String client_id, String Type, String Concept, String Account, int Bills, String BillsNumber, double Amount, String User) {
+    public Income(int Id, Date Date,String client_id,String sale, String Type, String Concept, String Account, int Bills, String BillsNumber, double Amount, String User) {
         this.Id = Id;
         this.Date = Date;
         this.Client=client_id;
+        this.Sale=sale;
         this.Expense_Type = Type;
         this.Concept = Concept;
         this.Account = Account;

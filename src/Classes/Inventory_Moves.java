@@ -10,50 +10,46 @@ package Classes;
  * @author macbook
  */
 public class Inventory_Moves {
+
     public int Id;
     public int Out_Id;
+    public int Qty1;
     public int In_Id;
-    public int Type_Id;
-      public String Out;
+    public int Qty;
+    public String Out;
     public String In;
-    public String Type;
-    public int Qty; 
-    public int Trash;
-    public int Reg_Id; 
- public Inventory_Moves() {
-    
-      
-    }
-    public Inventory_Moves(int Out_Id, int In_Id, int Type_Id, int Qty, int Trash) {
-        this.Out_Id = Out_Id;
-        this.In_Id = In_Id;
-        this.Type_Id = Type_Id;
-        this.Qty = Qty;
-        this.Trash = Trash;
-      
+    public int Req_Id;
+
+    public Inventory_Moves() {
+
     }
 
-    public Inventory_Moves(int Id, String Out, String In, String Type, int Qty, int Trash, int Reg_Id) {
+    public Inventory_Moves(int Id, int Out_Id, int Qty1, int In_Id, int Qty) {
         this.Id = Id;
+        this.Out_Id = Out_Id;
+        this.Qty1 = Qty1;
+        this.In_Id = In_Id;
+        this.Qty = Qty;
+    }
+
+    public Inventory_Moves(int Id, int Out_Id, int Qty1, int In_Id, int Qty, int Req_Id) {
+        this.Id = Id;
+        this.Out_Id = Out_Id;
+        this.Qty1 = Qty1;
+        this.In_Id = In_Id;
+        this.Qty = Qty;
+        this.Req_Id = Req_Id;
+    }
+
+    public Inventory_Moves(int Id, int Out_Id, int Qty1, int In_Id, int Qty, String Out, String In, int Req_Id) {
+        this.Id = Id;
+        this.Out_Id = Out_Id;
+        this.Qty1 = Qty1;
+        this.In_Id = In_Id;
+        this.Qty = Qty;
         this.Out = Out;
         this.In = In;
-        this.Type = Type;
-        this.Qty = Qty;
-        this.Trash = Trash;
-        this.Reg_Id = Reg_Id;
+        this.Req_Id = Req_Id;
     }
 
-   
-public int TotalStock;
-    public int PuntoVentaStock;
-    public int CabinaStock;
-
-    public Inventory_Moves(int Id, int TotalStock, int PuntoVentaStock, int CabinaStock) {
-        this.Id = Id;
-        this.TotalStock = TotalStock;
-        this.PuntoVentaStock = PuntoVentaStock;
-        this.CabinaStock = CabinaStock;
-    }
-   
-    
 }

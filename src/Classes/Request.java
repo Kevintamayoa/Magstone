@@ -5,7 +5,9 @@
  */
 package Classes;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -54,7 +56,20 @@ public class Request {
         this.State_Id = State_Id;
         this.Monto=Monto;
     }
-    
+     public List<Inventory> Inventory;
+
+    public Request(int Id, Date Date, String Comentario, String Provider, int Account_Id, String Account, int State_Id, double Monto, List<Inventory> Inventory) {
+        this.Id = Id;
+        this.Date = Date;
+        this.Comentario = Comentario;
+        this.Provider = Provider;
+        this.Account_Id = Account_Id;
+        this.Account = Account;
+        this.State_Id = State_Id;
+        this.Monto = Monto;
+        this.Inventory = Inventory;
+    }
+     
    
        
 }

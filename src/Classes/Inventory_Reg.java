@@ -6,6 +6,7 @@
 package Classes;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -25,6 +26,14 @@ public class Inventory_Reg {
         this.Id = Id;
         this.Date = Date;
         this.Detalle = Detalle;
+    }
+    public List<Inventory_Moves> list;
+
+    public Inventory_Reg(int Id, Date Date, String Detalle, List<Inventory_Moves> list) {
+        this.Id = Id;
+        this.Date = Date;
+        this.Detalle = Detalle;
+        this.list = list;
     }
     
 }
